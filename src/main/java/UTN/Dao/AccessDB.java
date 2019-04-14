@@ -27,15 +27,18 @@ public class AccessDB {
     }
     public void insertWinners(List<Human> winners){
         String winnerName = "";
+        String team ="";
         int beer;
         try {
             for(Human h : winners) {
                 winnerName = h.getName();
                 beer = h.getBeer();
-                String query = "insert into winners (name, beer_in_body) values (?, ?)";
+                team = h.getClass().getSimpleName();
+                String query = "insert into winners (name, beer_in_body, team) values (?, ?, ?)";
                 PreparedStatement preparedStmt = conn.prepareStatement(query);
                 preparedStmt.setString(1, winnerName);
                 preparedStmt.setInt(2, beer);
+                preparedStmt.setString(3,team);
                 preparedStmt.execute();
             }
         }
