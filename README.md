@@ -3,6 +3,7 @@
 PARTE TEORICA.
 
 1)Que es maven?
+  
   Maven es una herramienta open source de gestión de proyectos que se basa en la “convención sobre configuración”.
   Es decir, asume un comportamiento por defecto que permite empezar a trabajar sin necesidad de configuración.
   Se utiliza en la gestión y construcción de software. Posee la capacidad de realizar ciertas tareas claramente definidas, 
@@ -24,7 +25,8 @@ PARTE TEORICA.
   Todo se hará de forma automática sin que el usuario tenga que hacer nada más que definir las dependencias.
   
 2) POM, que significa y para que nos sirve?
-  POM significa project object model. Es un archivo XML, que es la “unidad” principal de un proyecto Maven.
+ 
+ POM significa project object model. Es un archivo XML, que es la “unidad” principal de un proyecto Maven.
   Dicho de otra forma, es una representacion en formato XML de un proyecto Maven guardado en un archivo llamado pom.xml .
   Contiene información a cerca del proyecto, nombre (groupId, artifactId, version), licencias, la URL donde esta el proyecto,
   modalidad de empaquetado (jar, war, ear, etc), fuentes, test, dependencias (junit, spring…), plugins (Java compiler, para 
@@ -37,7 +39,8 @@ PARTE TEORICA.
   
   
 3)  Diferencias entre el archetype y el artifact.
-  En esencia, un archetype es un patrón o modelo sobre el que se pueden desarrollar todas aquellas tareas que son de un mismo tipo.
+ 
+ En esencia, un archetype es un patrón o modelo sobre el que se pueden desarrollar todas aquellas tareas que son de un mismo tipo.
   Conceptualmente un arquetipo es básicamente una plantilla. Es decir, un patrón o modelo original desde el que se generarán otros
   elementos del mismo tipo. En desarrollo nos apoyamos en los arquetipos para reutilizar código y arquitecturas.
   Puede decirse que son plantillas, parametrizadas o configuradas para utilizar determinadas tecnologías que los desarrolladores 
