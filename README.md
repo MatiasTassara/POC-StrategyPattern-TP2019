@@ -71,6 +71,7 @@ PARTE TEORICA.
 Un archetype simple creara un proyecto vacio que se ve comop lo que esta arriba. El pom.xml va a estar listo para crear un jar.
 
 4)Explique los siguientes goals de Maven: Clean, Package, Install y Compile.
+
   -Compile: compila el codigo fuente del proyecto.
   -Package: empaqueta el build en un formato distribuible como ser: JAR, WAR EAR etc.
   -Install: instala el paquete en el repositorio local, para ser usado como dependencia en otros proyectos localmente.
@@ -78,12 +79,12 @@ Un archetype simple creara un proyecto vacio que se ve comop lo que esta arriba.
 
 5)Explique los siguientes scopes: compile, provide, runtime, test y system.
 
-  - Compile: es el valor por defecto. Se utiliza en todos los casos (compilar, ejecutar, …).
-  - Provided: también se utiliza en todos los casos, pero se espera que el jar sea suministrado por la JDK o el contenedor. 
+ -Compile: es el valor por defecto. Se utiliza en todos los casos (compilar, ejecutar, …).
+ -Provided: también se utiliza en todos los casos, pero se espera que el jar sea suministrado por la JDK o el contenedor. 
   Es decir, no se incluirá al empaquetar el proyecto, ni en el repositorio.
-  - Runtime: no se utiliza para compilar, pero si es necesario para ejecutar.
-  - Test: Sólo se utiliza para compilar o ejecutar los test.
-  - System: es similar a provided, pero eres tu el que tiene que suministrar el jar. No se incluirá al empaquetar el proyecto,
+ -Runtime: no se utiliza para compilar, pero si es necesario para ejecutar.
+ -Test: Sólo se utiliza para compilar o ejecutar los test.
+ -System: es similar a provided, pero eres tu el que tiene que suministrar el jar. No se incluirá al empaquetar el proyecto,
   ni en el repositorio.
 
   
