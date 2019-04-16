@@ -40,18 +40,18 @@ public class Tavern {
             spartan.setBeer(spartanScore);
             System.out.println(ANSI_GREEN + "Spartan " + spartan.getName() + " drinking score is: " + spartanScore);
             if (spartanScore > vikingScore) {
-                viking.getaBitofPee().pee();
+                viking.setBeer(viking.getaBitofPee().pee(vikingScore));
                 Spartan.setPoints(Spartan.getPoints() + 1);
                 winners.add(spartan);
                 }
             else if (vikingScore > spartanScore) {
-                spartan.getaBitofPee().pee();
+                spartan.setBeer(spartan.getaBitofPee().pee(spartanScore));
                 Viking.setPoints(Viking.getPoints() + 1);
                 winners.add(viking);
             }
             else{
-                viking.getaBitofPee().pee();
-                spartan.getaBitofPee().pee();
+                viking.setBeer(viking.getaBitofPee().pee(vikingScore));
+                spartan.setBeer(spartan.getaBitofPee().pee(spartanScore));
                 System.out.println(ANSI_YELLOW + "This is a tie, both the viking and the spartan are pussys.");
             }
         }
@@ -88,21 +88,23 @@ public class Tavern {
              int barTenderScore = ((Mutant)moeSislak).getTolerance() + moeSislak.getaDrink().drink();
 
              if(barTenderScore > humanScore){
-                 bestWinner.getaBitofPee().pee();
+                 bestWinner.setBeer(bestWinner.getaBitofPee().pee(humanScore));
                  System.out.println("Moe WINS... Fatality!!!");
                  moeSislak.setBeer(barTenderScore);
                  winners.add(moeSislak);
              }
              else if(humanScore > barTenderScore){
-                 moeSislak.getaBitofPee().pee();
+                 moeSislak.setBeer(moeSislak.getaBitofPee().pee(barTenderScore));
                  System.out.println(bestWinner.getName() + " wins!!!!");
                  winners.add(bestWinner);
              }
              else{
-                 moeSislak.getaBitofPee().pee();
-                 bestWinner.getaBitofPee().pee();
+                 moeSislak.setBeer(moeSislak.getaBitofPee().pee(barTenderScore));
+                 bestWinner.setBeer(bestWinner.getaBitofPee().pee(humanScore));
                  System.out.println("This is a tie.... so boring, a pussy doesn't deserve going to the DB");
              }
+             System.out.println(ANSI_RESET + "The " + bestWinner.getClass().getSimpleName() + " score is: " + bestWinner.getBeer());
+            System.out.println(ANSI_RESET + "The " + moeSislak.getClass().getSimpleName() + " bartender score is: " + moeSislak.getBeer());
           }
           else{
               System.out.println(ANSI_YELLOW + "No one deserves to compete against Moe because both teams tied...(they are pussys). ");

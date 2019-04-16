@@ -1,5 +1,5 @@
 package UTN.Interfaces;
 
 public interface Pishable {
-    void pee();
+    int pee(int a);
 }
