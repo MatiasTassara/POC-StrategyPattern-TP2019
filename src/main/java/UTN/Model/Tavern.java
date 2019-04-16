@@ -74,14 +74,15 @@ public class Tavern {
         Human bestWinner = winners.stream()
                 .max(Comparator.comparing(Human::getBeer))
                 .get();
-        if(bestWinner instanceof Viking){
-            humanScore = ((Viking) bestWinner).getProDrinker();
-        }
-        else if(bestWinner instanceof Spartan){
-            humanScore = ((Spartan) bestWinner).getExtraTolerance();
-        }
+
 
         if(Viking.getPoints() != Spartan.getPoints()){
+            if(bestWinner instanceof Viking){
+                humanScore = ((Viking) bestWinner).getProDrinker();
+            }
+            else if(bestWinner instanceof Spartan){
+                humanScore = ((Spartan) bestWinner).getExtraTolerance();
+            }
             humanScore = humanScore + bestWinner.getaDrink().drink();
              System.out.println(ANSI_RESET + "***** MOE VERSUS THE BEST " + bestWinner.getClass().getSimpleName() + " WINNER. *****");
              System.out.println("3,2,1....Drink!!!");
