@@ -70,13 +70,12 @@ public class Tavern {
     }
 
     public void finalBattle(){
+
         int humanScore = 0;
-        Human bestWinner = winners.stream()
-                .max(Comparator.comparing(Human::getBeer))
-                .get();
-
-
         if(Viking.getPoints() != Spartan.getPoints()){
+            Human bestWinner = winners.stream()
+                    .max(Comparator.comparing(Human::getBeer))
+                    .get();
             if(bestWinner instanceof Viking){
                 humanScore = ((Viking) bestWinner).getProDrinker();
             }
@@ -105,7 +104,7 @@ public class Tavern {
                  System.out.println("This is a tie.... so boring, a pussy doesn't deserve going to the DB");
              }
              System.out.println(ANSI_RESET + "The " + bestWinner.getClass().getSimpleName() + " score is: " + bestWinner.getBeer());
-            System.out.println(ANSI_RESET + "The " + moeSislak.getClass().getSimpleName() + " bartender score is: " + moeSislak.getBeer());
+             System.out.println(ANSI_RESET + "The " + moeSislak.getClass().getSimpleName() + " bartender score is: " + moeSislak.getBeer());
           }
           else{
               System.out.println(ANSI_YELLOW + "No one deserves to compete against Moe because both teams tied...(they are pussys). ");
